@@ -1,0 +1,43 @@
+{
+  "package": "obix-component-image",
+  "dir": "core/obix-component-image",
+  "importedBy": "scripts/recovery/generate-shims.mjs",
+  "stage": "stage-7 compat shim (authored-in-recovery; no upstream code)",
+  "replaces": {
+    "name": "@obinexusltd/obix-component-image",
+    "source": "npm:@obinexusltd/obix-component-image@0.3.0",
+    "integrity": "sha512-FIyr+iz8nHi+URK6etf4zezoXbT7wiWZRPISIh0lpyrlvkcxLeWvWcsITp9sJiGkMMrcLUwqr8e2ILqooAUd/w=="
+  },
+  "owner": "obix-core-component",
+  "surface": "docs/recovery/shim-surface.json",
+  "decision": "compat-shim (docs/recovery/migration-table.md; obix-naming.json legacyShims, kind published)",
+  "entries": {
+    ".": {
+      "values": 2,
+      "types": 4,
+      "removed": [],
+      "missingTypes": [
+        "Action",
+        "DOPComponent",
+        "ImageObjectFit"
+      ]
+    }
+  },
+  "localFixes": [],
+  "renamedFrom": [
+    {
+      "name": "@obinexusltd/obix-component-image",
+      "dir": "core/obix-component-image",
+      "stage": "unscoped-naming",
+      "why": "D-102 (2026-09-29): OBIX packages are named without an npm scope — previous name @obinexusltd/obix-component-image, current name obix-component-image (docs/recovery/unscoped-migration.md); the directory, version and exports are unchanged"
+    }
+  ],
+  "export": {
+    "from": "https://github.com/obinexusmk2/obix-monorepo",
+    "branch": "recovery/obix-api-preserving-rebuild",
+    "commit": "69cafc94910c1add865a520877617ac307668875",
+    "directory": "core/obix-component-image",
+    "exportedBy": "scripts/release/export-repos.mjs",
+    "note": "a clean initial commit of this package; the monorepo history is not imported (D-103). Local machine paths in this record are replaced by <local workspace>."
+  }
+}
